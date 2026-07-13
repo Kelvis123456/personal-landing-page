@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "skills": "Stack",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Kelvis Guerrero",
+    "roles": ["Backend Developer", "C# & .NET Developer", "Desarrollador de Software", "Apasionado por las APIs"],
+    "summary": "Construyo backends sólidos con C# y .NET. Enfocado en APIs REST, automatización y soluciones reales en entornos profesionales.",
+    "cta_contact": "Contáctame",
+    "cta_scroll": "Ver mi trabajo"
+  },
+  "about": {
+    "label": "Sobre mí",
+    "title": "Quién soy",
+    "bio": "Soy Kelvis, estudiante de Desarrollo de Software en el ITLA con experiencia real en entornos profesionales. Me especializo en backend con C# y .NET — construyo APIs, automatizo procesos y escribo código limpio. Pasé por la Superintendencia de Bancos RD desarrollando soluciones reales con .NET, y eso solidificó mi enfoque: quiero ser programador.",
+    "stats": {
+      "years": "Años estudiando",
+      "internships": "Pasantías",
+      "technologies": "Tecnologías",
+      "focus": "Enfoque principal"
+    },
+    "stat_years": "5+",
+    "stat_internships": "2",
+    "stat_tech": "8+",
+    "stat_focus": "Backend",
+    "languages_label": "Idiomas",
+    "spanish": "Español",
+    "spanish_level": "Nativo",
+    "english": "Inglés",
+    "english_level": "Intermedio"
+  },
+  "skills": {
+    "label": "Stack tecnológico",
+    "title": "Tecnologías que uso",
+    "subtitle": "Mi stack principal está orientado al backend. Conozco el frontend lo suficiente para entender el ecosistema completo.",
+    "main_label": "Principal",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "tools": "Herramientas"
+  },
+  "experience": {
+    "label": "Experiencia",
+    "title": "Experiencia profesional",
+    "items": [
+      {
+        "role": "Desarrollador de Software",
+        "type": "Pasantía",
+        "company": "Superintendencia de Bancos RD",
+        "period": "Ago 2025 – Ene 2026",
+        "location": "Santo Domingo, RD",
+        "description": "Desarrollé soluciones backend reales dentro de una institución financiera del Estado dominicano.",
+        "bullets": [
+          "APIs REST con C# y .NET en producción",
+          "Worker Services para automatización de procesos críticos",
+          "Integración OAuth con ManageEngine API",
+          "Control de logs, duplicados y manejo de JSON",
+          "Buenas prácticas .NET con appsettings.json"
+        ],
+        "tags": ["C#", ".NET", "REST API", "OAuth", "SQL"]
+      },
+      {
+        "role": "Soporte Técnico",
+        "type": "Pasantía",
+        "company": "E.threan",
+        "period": "Mayo 2023",
+        "location": "Santo Domingo, RD",
+        "description": "Primer contacto profesional con entornos IT reales y soporte a clientes.",
+        "bullets": [
+          "Soporte remoto con TeamViewer y AnyDesk",
+          "Gestión de tickets y comunicación con clientes",
+          "Actualización de bases de datos internas"
+        ],
+        "tags": ["TeamViewer", "AnyDesk", "IT Support"]
+      }
+    ]
+  },
+  "education": {
+    "label": "Educación",
+    "title": "Formación técnica",
+    "institution": "Instituto Tecnológico Las Américas",
+    "short": "ITLA",
+    "degree": "Técnico en Desarrollo de Software",
+    "period": "2020 – Presente",
+    "location": "La Caleta, Santo Domingo, RD",
+    "status": "En curso",
+    "description": "Carrera técnica enfocada en programación, bases de datos, redes y desarrollo web. Donde aprendí C#, .NET, SQL y los fundamentos que aplico hoy.",
+    "subjects": ["C# & .NET", "Bases de datos SQL", "Desarrollo Web", "Estructuras de datos", "Redes"]
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "Hablemos",
+    "subtitle": "¿Tienes una oportunidad, proyecto o simplemente quieres hablar sobre tecnología? Escríbeme.",
+    "email_label": "Correo electrónico",
+    "phone_label": "Teléfono",
+    "linkedin_label": "LinkedIn",
+    "copy_tooltip": "Copiar email",
+    "copied": "¡Copiado!"
+  },
+  "footer": {
+    "built": "Construido con React + Framer Motion",
+    "rights": "Todos los derechos reservados."
+  }
+}

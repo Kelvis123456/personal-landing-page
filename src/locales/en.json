@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Stack",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Kelvis Guerrero",
+    "roles": ["Backend Developer", "C# & .NET Developer", "Software Developer", "API enthusiast"],
+    "summary": "I build solid backends with C# and .NET. Focused on REST APIs, process automation and real solutions in professional environments.",
+    "cta_contact": "Contact me",
+    "cta_scroll": "See my work"
+  },
+  "about": {
+    "label": "About me",
+    "title": "Who I am",
+    "bio": "I'm Kelvis, a Software Development student at ITLA with real-world professional experience. I specialize in backend development with C# and .NET — I build APIs, automate processes and write clean code. After my internship at the Superintendencia de Bancos RD building real .NET solutions, my goal is clear: I want to be a professional programmer.",
+    "stats": {
+      "years": "Years studying",
+      "internships": "Internships",
+      "technologies": "Technologies",
+      "focus": "Main focus"
+    },
+    "stat_years": "5+",
+    "stat_internships": "2",
+    "stat_tech": "8+",
+    "stat_focus": "Backend",
+    "languages_label": "Languages",
+    "spanish": "Spanish",
+    "spanish_level": "Native",
+    "english": "English",
+    "english_level": "Intermediate"
+  },
+  "skills": {
+    "label": "Tech stack",
+    "title": "Technologies I use",
+    "subtitle": "My main stack is backend-focused. I know enough frontend to understand the full picture.",
+    "main_label": "Main",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "tools": "Tools"
+  },
+  "experience": {
+    "label": "Experience",
+    "title": "Professional experience",
+    "items": [
+      {
+        "role": "Software Developer",
+        "type": "Internship",
+        "company": "Superintendencia de Bancos RD",
+        "period": "Aug 2025 – Jan 2026",
+        "location": "Santo Domingo, DR",
+        "description": "Developed real backend solutions inside a Dominican government financial institution.",
+        "bullets": [
+          "REST APIs with C# and .NET in production",
+          "Worker Services for critical process automation",
+          "OAuth integration with ManageEngine API",
+          "Log control, duplicate handling and JSON processing",
+          ".NET best practices with appsettings.json"
+        ],
+        "tags": ["C#", ".NET", "REST API", "OAuth", "SQL"]
+      },
+      {
+        "role": "Technical Support",
+        "type": "Internship",
+        "company": "E.threan",
+        "period": "May 2023",
+        "location": "Santo Domingo, DR",
+        "description": "First professional contact with real IT environments and client support.",
+        "bullets": [
+          "Remote support via TeamViewer and AnyDesk",
+          "Ticket management and client communication",
+          "Internal database registration and updates"
+        ],
+        "tags": ["TeamViewer", "AnyDesk", "IT Support"]
+      }
+    ]
+  },
+  "education": {
+    "label": "Education",
+    "title": "Technical training",
+    "institution": "Instituto Tecnológico Las Américas",
+    "short": "ITLA",
+    "degree": "Software Development Technician",
+    "period": "2020 – Present",
+    "location": "La Caleta, Santo Domingo, DR",
+    "status": "In progress",
+    "description": "Technical degree focused on programming, databases, networking and web development. Where I learned C#, .NET, SQL and the fundamentals I apply today.",
+    "subjects": ["C# & .NET", "SQL Databases", "Web Development", "Data Structures", "Networking"]
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's talk",
+    "subtitle": "Got an opportunity, project or just want to talk tech? Reach out.",
+    "email_label": "Email",
+    "phone_label": "Phone",
+    "linkedin_label": "LinkedIn",
+    "copy_tooltip": "Copy email",
+    "copied": "Copied!"
+  },
+  "footer": {
+    "built": "Built with React + Framer Motion",
+    "rights": "All rights reserved."
+  }
+}
