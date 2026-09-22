@@ -5,7 +5,7 @@ const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.5, ease: 'easeOut', delay },
+  transition: { duration: 0.5, ease: 'easeOut', delay } as const,
 })
 
 export default function About() {
