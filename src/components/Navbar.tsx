@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Sun, Moon, Globe, Menu, X } from 'lucide-react'
@@ -11,12 +11,46 @@ export default function Navbar() {
   const { isDark, toggle } = useTheme()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const toggleButtonRef = useRef<HTMLButtonElement>(null)
+  const menuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', handler)
     return () => window.removeEventListener('scroll', handler)
   }, [])
+
+  // Focus trap + Escape-to-close + focus-restore for the mobile menu dialog.
+  useEffect(() => {
+    if (!menuOpen) return
+    const menu = menuRef.current
+    const focusable = menu?.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')
+    focusable?.[0]?.focus()
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        setMenuOpen(false)
+        return
+      }
+      if (e.key !== 'Tab' || !focusable || focusable.length === 0) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      toggleButtonRef.current?.focus()
+    }
+  }, [menuOpen])
 
   const switchLang = () => {
     i18n.changeLanguage(i18n.language.startsWith('es') ? 'en' : 'es')
@@ -70,6 +104,7 @@ export default function Navbar() {
             onClick={switchLang}
             className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm font-semibold text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             title="Change language"
+            aria-label="Change language"
           >
             <Globe size={14} />
             {i18n.language.startsWith('es') ? 'ES' : 'EN'}
@@ -81,6 +116,7 @@ export default function Navbar() {
             onClick={toggle}
             className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             title="Toggle theme"
+            aria-label="Toggle theme"
           >
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
@@ -97,7 +133,11 @@ export default function Navbar() {
 
           {/* Mobile menu btn */}
           <button
+            ref={toggleButtonRef}
             onClick={() => setMenuOpen(v => !v)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
             className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
             {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -109,6 +149,11 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            id="mobile-menu"
+            ref={menuRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}

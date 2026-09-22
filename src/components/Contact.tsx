@@ -93,6 +93,7 @@ export default function Contact() {
                   whileTap={{ scale: 0.9 }}
                   onClick={c.action}
                   title={c.actionLabel}
+                  aria-label={c.actionLabel}
                   className="p-2 rounded-lg text-gray-400 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-accent-50 dark:hover:bg-accent-900/20 transition-all shrink-0"
                 >
                   <AnimatePresence mode="wait" initial={false}>
@@ -112,6 +113,10 @@ export default function Contact() {
             </motion.div>
           ))}
         </div>
+
+        <span role="status" aria-live="polite" className="sr-only">
+          {copied ? t('contact.copied') : ''}
+        </span>
       </div>
     </section>
   )

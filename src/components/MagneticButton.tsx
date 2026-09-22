@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 
 interface Props {
   children: React.ReactNode
@@ -11,9 +11,10 @@ interface Props {
 export default function MagneticButton({ children, className = '', onClick, strength = 0.35 }: Props) {
   const ref = useRef<HTMLDivElement>(null)
   const [pos, setPos] = useState({ x: 0, y: 0 })
+  const shouldReduceMotion = useReducedMotion()
 
   const handleMove = (e: React.MouseEvent) => {
-    if (!ref.current) return
+    if (shouldReduceMotion || !ref.current) return
     const rect = ref.current.getBoundingClientRect()
     const cx = rect.left + rect.width / 2
     const cy = rect.top + rect.height / 2
