@@ -112,8 +112,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="mx-auto text-gray-600 dark:text-gray-300 mb-12 leading-relaxed" style={{ maxWidth: '70ch' }}
-          style={{ fontSize: 'clamp(0.9rem, 1.6vw, 1.5rem)' }}
+          className="mx-auto text-gray-600 dark:text-gray-300 mb-12 leading-relaxed"
+          style={{ maxWidth: '70ch', fontSize: 'clamp(0.9rem, 1.6vw, 1.5rem)' }}
         >
           {t('hero.summary')}
         </motion.p>
